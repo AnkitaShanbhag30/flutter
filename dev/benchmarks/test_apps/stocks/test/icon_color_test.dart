@@ -3,9 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_reelatable/main.dart' as stocks;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:stocks/main.dart' as stocks;
-import 'package:stocks/stock_data.dart' as stock_data;
 
 Element? findElementOfExactWidgetTypeGoingDown(Element node, Type targetType) {
   void walker(Element child) {
@@ -43,7 +42,6 @@ void checkIconColor(WidgetTester tester, String label, Color color) {
 }
 
 void main() {
-  stock_data.StockData.actuallyFetchData = false;
 
   testWidgets('Icon colors', (WidgetTester tester) async {
     stocks.main(); // builds the app and schedules a frame but doesn't trigger one

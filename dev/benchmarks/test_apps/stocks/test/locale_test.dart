@@ -2,12 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:flutter_application_reelatable/main.dart' as stocks;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:stocks/main.dart' as stocks;
-import 'package:stocks/stock_data.dart' as stock_data;
 
 void main() {
-  stock_data.StockData.actuallyFetchData = false;
+  // stock_data.StockData.actuallyFetchData = false;
 
   testWidgets('Changing locale', (WidgetTester tester) async {
     stocks.main();
